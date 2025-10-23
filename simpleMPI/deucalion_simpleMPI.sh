@@ -19,5 +19,6 @@ module load gompi
 mpicc -O2 -ftree-vectorize -march=native -fno-math-errno -o hello_mpi hello_mpi.c
 
 # Run the program
+# Note that although we declared 20 tasks, only 5 were used in this run
 mpirun -n 5 ./hello_mpi
 
