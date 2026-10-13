@@ -3,7 +3,7 @@
 #SBATCH --mail-user=mmadeira@ualg.pt
 #SBATCH --mail-type=ALL
 
-#SBATCH --job-name=mm_4096_ijk          # Job name
+#SBATCH --job-name=mm_1024_ijk          # Job name
 #SBATCH --partition=normal-arm               # Partition to submit to
 #SBATCH --account=F202500006HPCVLABUALGA
 #SBATCH --nodes=1                     # Run on a single node
@@ -15,10 +15,10 @@
 module load GCC/14.2.0
 
 
-gcc -o mm_4096_ijk -O2 -ftree-vectorize -march=native -fno-math-errno mm_4096_ijk.c 
+gcc -o mm_1024_ijk -O2 -ftree-vectorize -march=native -fno-math-errno mm_4096_ijk.c 
 # for real code, consider using CFLAGS
 # -O2 -ftree-vectorize -march=native -fno-math-errno 
 
 # Run the program
-./mm_4096_ijk
+./mm_1024_ijk
 
