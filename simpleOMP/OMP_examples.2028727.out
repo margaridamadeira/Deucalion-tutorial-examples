@@ -1,0 +1,24 @@
+gcc -Wall -std=gnu99 exemplo-ambiente.c -lm -fopenmp -o exemplo-ambiente
+export OMP_NUM_THREADS=4; ./exemplo-ambiente
+Thread 0 getting environment info...
+Number of processors = 48
+Number of threads = 4
+Max threads = 4
+In parallel? = 1
+Dynamic threads enabled? = 0
+Nested parallelism enabled? = 0
+export OMP_NUM_THREADS=5; ./exemplo-ambiente
+Thread 0 getting environment info...
+Number of processors = 48
+Number of threads = 5
+Max threads = 5
+In parallel? = 1
+Dynamic threads enabled? = 0
+Nested parallelism enabled? = 0
+Thread 0 getting environment info...
+Number of processors = 48
+Number of threads = 48
+Max threads = 48
+In parallel? = 1
+Dynamic threads enabled? = 0
+Nested parallelism enabled? = 0
